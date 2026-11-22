@@ -1,0 +1,212 @@
+/* ─── Contact Section ──────────────────────────────────────────────────── */
+
+#contact {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+/* ─── Contact Card Shell ─────────────────────────────────────────────────── */
+
+.contact-card {
+    margin-top: 52px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 44px 48px;
+    background: var(--background);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-card-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.contact-subheading {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.contact-col-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 8px 0;
+}
+
+/* ─── Direct Email Row ───────────────────────────────────────────────────── */
+
+.contact-email-row {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+}
+
+.contact-email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-size: clamp(14.5px, 1.6vw, 16.5px);
+    font-weight: 600;
+    color: var(--text);
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    flex: 1;
+    min-width: 0;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.contact-email-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    color: var(--accent);
+}
+
+.contact-email-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.contact-copy-btn:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.copy-icon-success {
+    color: #3d9e6a;
+}
+
+/* ─── Online Profiles Adaptive Grid ──────────────────────────────────────── */
+
+.contact-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.contact-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-link-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.contact-profile-icon {
+    flex-shrink: 0;
+    color: var(--muted);
+    transition: color 0.2s;
+}
+
+.contact-link-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.external-icon {
+    color: var(--muted);
+    transition: color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+
+.contact-link-item:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.contact-link-item:hover .contact-profile-icon,
+.contact-link-item:hover .external-icon {
+    color: var(--accent);
+}
+
+.contact-link-item:hover .external-icon {
+    transform: translate(1px, -1px);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 36px 30px;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact-email-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-email-link {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    .contact-copy-btn {
+        padding: 12px 16px;
+        justify-content: center;
+    }
+
+    .contact-links-grid {
+        grid-template-columns: 1fr;
+    }
+}

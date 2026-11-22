@@ -1,0 +1,37 @@
+/* Shared button styles used across multiple components */
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 19px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.primary-button {
+    background: var(--text);
+    color: var(--background);
+    border: none;
+}
+
+.primary-button:hover {
+    opacity: 0.82;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-heading: 'Manrope', sans-serif;
+  --accent: #5267a5;
+  --accent-soft: rgba(82, 103, 165, 0.10);
+  --background: #faf9f6;
+  --surface: #ffffff;
+  --text: #242522;
+  --muted: #777871;
+  --border: #e9e8e2;
+  --nav-bg: rgba(250, 249, 246, 0.85);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] {
+  --accent: #a4b5ed;
+  --accent-soft: rgba(164, 181, 237, 0.12);
+  --background: #151618;
+  --surface: #1d1f22;
+  --text: #efefeb;
+  --muted: #a0a19e;
+  --border: #303236;
+  --nav-bg: rgba(21, 22, 24, 0.85);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+.container {
+  width: min(1080px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 108px 0;
+  position: relative;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* ─── Distinct Section Header Badge ─────────────────────────────────────── */
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-soft);
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -1.4px;
+  line-height: 1.18;
+  color: var(--text);
+  margin-top: 6px;
+}
+
+.section-description {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 580px;
+  margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 36px, 1080px);
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+
+  .section-label {
+    font-size: 10px;
+    padding: 4px 11px;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* ── Shared card image styles (used in CurrentlyWorking, Projects, Research) ── */
+.card-image-wrap {
+  width: 100%;
+  margin-bottom: 14px;
+  background: transparent;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 0;
+}
+
+/* Modal image — wider, no crop, no frame */
+.modal-image-wrap {
+  width: 100%;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 0;
+}

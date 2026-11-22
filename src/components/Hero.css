@@ -1,0 +1,289 @@
+.hero {
+    min-height: 620px;
+    display: grid;
+    /* Brought columns and gap closer: gap reduced from 70px to 36px */
+    grid-template-columns: 1.18fr 0.82fr;
+    align-items: center;
+    gap: 36px;
+    padding-top: 75px;
+    padding-bottom: 90px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 13px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #55a77a;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.hero-intro {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 19px;
+}
+
+.hero-name {
+    font-family: var(--font-heading);
+    font-size: clamp(64px, 7.5vw, 92px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -5px;
+}
+
+.hero-name span {
+    color: var(--accent);
+}
+
+.hero-tagline {
+    font-family: var(--font-heading);
+    font-size: clamp(17px, 2vw, 22px);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    margin-top: 22px;
+    max-width: 480px;
+}
+
+.hero-description {
+    max-width: 510px;
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero-location {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 19px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Social links right below location */
+.hero-social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: color 0.2s, border-color 0.2s, transform 0.2s;
+    word-break: break-all;
+}
+
+.hero-social-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.hero-social-link svg {
+    flex-shrink: 0;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+/* ─── Profile image & Resume area ────────────────────────────────────────── */
+
+.hero-image-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    justify-self: center;
+}
+
+/* Transparent / Frame-free image wrapper
+   You can easily adjust the size below (default: 380px max-width, 500px max-height) */
+.hero-image-wrapper {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-profile-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.09));
+}
+
+[data-theme="dark"] .hero-profile-img {
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45));
+}
+
+.hero-image-wrapper:hover .hero-profile-img {
+    transform: translateY(-4px);
+}
+
+.image-placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    text-align: center;
+    padding: 30px;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    width: 100%;
+}
+
+.image-placeholder-content svg {
+    color: var(--accent);
+}
+
+.image-placeholder-content p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.image-caption {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Single Resume button */
+
+.hero-resume-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.hero-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 18px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.hero-resume-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+}
+
+.resume-ext-icon {
+    color: var(--muted);
+    transition: color 0.2s;
+}
+
+.hero-resume-btn:hover .resume-ext-icon {
+    color: var(--accent);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+    .hero {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 24px;
+    }
+
+    .hero-image-wrapper {
+        max-width: 320px;
+    }
+
+    .hero-profile-img {
+        max-width: 320px;
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 65px;
+    }
+
+    .hero-name {
+        font-size: clamp(58px, 13vw, 76px);
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-image-wrapper {
+        max-width: 280px;
+    }
+
+    .hero-profile-img {
+        max-width: 280px;
+        max-height: 380px;
+    }
+
+    .hero-social-links {
+        gap: 8px;
+    }
+
+    .hero-social-link {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .hero-resume-btn {
+        padding: 8px 16px;
+    }
+}

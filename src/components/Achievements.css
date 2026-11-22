@@ -1,0 +1,91 @@
+/* ─── Achievements Section ─────────────────────────────────────────────── */
+
+#achievements {
+    background: var(--background);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.achievements-list {
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 32px;
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    transition: background 0.2s;
+}
+
+.achievement-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.achievement-main {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 720px;
+}
+
+.achievement-title {
+    font-family: var(--font-heading);
+    font-size: clamp(17px, 2vw, 19px);
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 1.35;
+    color: var(--text);
+}
+
+.achievement-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: var(--muted);
+    flex-wrap: wrap;
+}
+
+.achievement-org {
+    font-weight: 500;
+}
+
+.achievement-sep {
+    color: var(--border);
+    font-weight: bold;
+}
+
+.achievement-contribution {
+    color: var(--muted);
+}
+
+.achievement-meta {
+    flex-shrink: 0;
+}
+
+.achievement-date {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+    .achievement-item {
+        flex-direction: column;
+        gap: 8px;
+        padding: 22px 0;
+    }
+
+    .achievement-date {
+        font-size: 11px;
+    }
+}
