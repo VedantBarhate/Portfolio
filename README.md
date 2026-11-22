@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my projects, research work, technical skills, experience, and academic background.
 
-<!-- 🌐 **Live Website:** [Add your Vercel URL] -->
+🌐 **Live Website:** [https://vedant-portfolio-liard.vercel.app/]
 
 ## About
 
