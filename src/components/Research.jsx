@@ -141,25 +141,25 @@ function Research() {
                 </button>
               </div>
 
-              {/* Modal Title & Overview */}
-              <div className="research-modal-title-wrap">
-                <h3 className="research-modal-title">{activePaper.title}</h3>
-                <p className="research-modal-summary">{activePaper.shortDescription}</p>
-              </div>
-
-              {/* Modal Image */}
-              {activePaper.image && (
-                <div className="modal-image-wrap">
-                  <img
-                    src={`/research/${activePaper.image}`}
-                    alt={`${activePaper.title} preview`}
-                    className="modal-image"
-                  />
-                </div>
-              )}
-
               {/* Modal Scrollable Body */}
               <div className="research-modal-body">
+                {/* Modal Title & Overview */}
+                <div className="research-modal-title-wrap">
+                  <h3 className="research-modal-title">{activePaper.title}</h3>
+                  <p className="research-modal-summary">{activePaper.shortDescription}</p>
+                </div>
+
+                {/* Modal Image */}
+                {activePaper.image && (
+                  <div className="modal-image-wrap">
+                    <img
+                      src={`/research/${activePaper.image}`}
+                      alt={`${activePaper.title} preview`}
+                      className="modal-image"
+                    />
+                  </div>
+                )}
+
                 {/* Research Question */}
                 <div className="research-question-block">
                   <span className="section-subheading">Research Question</span>
