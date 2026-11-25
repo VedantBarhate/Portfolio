@@ -59,6 +59,7 @@ const currentWork = [
       { label: 'Module 1', url: 'https://lnkd.in/p/gSZiEAK4' },
       { label: 'Module 2', url: 'https://lnkd.in/p/gk6gzyJg' },
       { label: 'Module 3', url: 'https://lnkd.in/p/gmSTCXrJ' },
+      { label: 'Module 4 & 5', url: 'https://lnkd.in/p/gHwWqtWr' },
     ],
   },
 ];
