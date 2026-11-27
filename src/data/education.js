@@ -5,7 +5,7 @@ const education = [
     location: 'Pune, Maharashtra, India',
     degree: 'Bachelor of Technology — Computer Science and Engineering',
     duration: '2023 – 2027',
-    performance: 'CGPA: 8.27 / 10',
+    performance: 'CGPA: 8.25 / 10',
   },
   {
     id: 2,
